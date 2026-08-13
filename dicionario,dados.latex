@@ -1,0 +1,196 @@
+```latex
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{geometry}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{setspace}
+
+\geometry{
+    left=3cm,
+    right=2cm,
+    top=3cm,
+    bottom=2cm
+}
+
+\begin{document}
+
+%=================================================
+% CAPA
+%=================================================
+
+\begin{center}
+
+{\Large FATEC BAIXADA SANTISTA RUBENS LARA}
+
+\vspace{4cm}
+
+{\LARGE \textbf{Dados do Porto de Santos 2016 a 2026}}
+
+\vspace{1cm}
+
+{\Large Teoria do Aprendizado Estatístico}
+
+\vspace{4cm}
+
+\textbf{Autores}
+
+\vspace{0.5cm}
+
+Rafael de Sousa Rodrigues Pinto
+
+Diego de Farias Carazo Prieto
+
+Andre Cesar Franco
+
+\vfill
+
+Santos -- SP
+
+2026
+
+\end{center}
+
+\newpage
+
+%=================================================
+% DICIONÁRIO DE DADOS
+%=================================================
+
+\section{Dicionário de Dados}
+
+A Tabela \ref{tab:dicionario} apresenta o dicionário de dados utilizado para a análise das operações de movimentação de cargas no Porto de Santos.
+
+\renewcommand{\arraystretch}{1.2}
+
+\begin{longtable}{|p{3cm}|p{5cm}|p{3.5cm}|p{4cm}|}
+\caption{Dicionário de Dados da Base de Exportação de Cargas}
+\label{tab:dicionario}\\
+\hline
+\textbf{Variável} & \textbf{Descrição} & \textbf{Tipo} & \textbf{Valores/Domínio} \\
+\hline
+\endfirsthead
+
+\hline
+\textbf{Variável} & \textbf{Descrição} & \textbf{Tipo} & \textbf{Valores/Domínio} \\
+\hline
+\endhead
+
+TOTAL\_TEU &
+Quantidade total de TEUs movimentados na operação. &
+Quantitativa Discreta &
+Números inteiros maiores ou iguais a zero. \\
+\hline
+
+NUMERO\_VIAGEM &
+Código identificador da viagem da embarcação. &
+Identificador &
+Número único associado à viagem. \\
+\hline
+
+TIPO\_NAVEGACAO &
+Modalidade de navegação utilizada. &
+Qualitativa Nominal &
+Longo Curso, Cabotagem. \\
+\hline
+
+MOVIMENTO &
+Tipo de movimentação realizada no porto. &
+Qualitativa Nominal &
+Convencional, Remoção, Transbordo, Malogro, Contrabordo. \\
+\hline
+
+ANO &
+Ano de referência da operação. &
+Quantitativa Discreta &
+2016 a 2026. \\
+\hline
+
+TERMINAIS &
+Nome do terminal portuário responsável pela movimentação. &
+Qualitativa Nominal &
+Santos Brasil, BTP, Ecoporto, DP World e demais terminais. \\
+\hline
+
+TOTAL\_TONELADAS &
+Quantidade total de carga movimentada em toneladas. &
+Quantitativa Contínua &
+Valores reais positivos. \\
+\hline
+
+NATUREZA\_CARGA &
+Classificação da carga movimentada. &
+Qualitativa Nominal &
+Carga Conteinerizada, Carga Geral, Granel Líquido e Granel Sólido. \\
+\hline
+
+TOTAL\_UNID &
+Quantidade total de unidades movimentadas. &
+Quantitativa Discreta &
+Números inteiros maiores ou iguais a zero. \\
+\hline
+
+MES &
+Mês de referência da operação. &
+Qualitativa Ordinal &
+Janeiro (1) a Dezembro (12). \\
+\hline
+
+CLASSENAVIO &
+Classe ou tipo da embarcação. &
+Qualitativa Nominal &
+Porta-Containers, Graneleiro, Petroleiro, Roll-on/Roll-off, entre outros. \\
+\hline
+
+SENTIDO &
+Direção da movimentação da carga. &
+Qualitativa Nominal &
+Embarque, Desembarque, Movimento a Bordo. \\
+\hline
+
+TIPO\_INSTALACAO &
+Tipo de instalação portuária. &
+Qualitativa Nominal &
+Porto Organizado, TUP. \\
+\hline
+
+BERCOS &
+Código do berço de atracação utilizado. &
+Identificador &
+SBR 1, SBR 2, ECOP 3, ARM 35.1, entre outros. \\
+\hline
+
+MERCADORIAS &
+Descrição da mercadoria movimentada. &
+Qualitativa Nominal &
+Café, Suco Cítrico, Nafta, Metanol, Carnes Diversas e demais mercadorias. \\
+\hline
+
+ANO\_MES &
+Data consolidada de referência da operação. &
+Qualitativa Ordinal &
+Datas no formato AAAA-MM-DD. \\
+\hline
+
+\end{longtable}
+
+%=================================================
+% OBSERVAÇÕES
+%=================================================
+
+\section{Observações}
+
+\begin{itemize}
+    \item As variáveis TOTAL\_TEU, TOTAL\_TONELADAS e TOTAL\_UNID representam as principais medidas quantitativas da base.
+    \item As variáveis ANO, MES e ANO\_MES possuem caráter temporal e podem ser utilizadas em análises de séries temporais.
+    \item As variáveis categóricas representam características operacionais, logísticas e estruturais das operações portuárias.
+    \item A variável NUMERO\_VIAGEM atua como identificador operacional da viagem da embarcação.
+\end{itemize}
+
+\end{document}
+```
